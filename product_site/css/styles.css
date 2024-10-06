@@ -1,0 +1,40 @@
+h1 {
+    font-family: Ubuntu, sans-serif;
+    font-size: 60px;
+    color: green;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p, ol, table {
+    font-family: Ubuntu;
+    line-height: normal;
+    font-size: 25px;
+}
+
+.p3Head{
+    font-style: italic;
+}
+
+body {
+    background-color: skyblue;
+}
+
+#p3img {
+    width: 800px;
+    height: 500px;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: green;
+}
