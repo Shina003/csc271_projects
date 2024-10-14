@@ -1,7 +1,7 @@
 h1 {
-    font-family: Ubuntu, sans-serif;
+    font-family: Kanit, sans-serif;
     font-size: 60px;
-    color: green;
+    color: #000000;
 }
 
 h2 {
@@ -9,9 +9,10 @@ h2 {
 }
 
 p, ol, table {
-    font-family: Ubuntu;
+    font-family: Kanit;
     line-height: normal;
     font-size: 25px;
+    color: #000000;
 }
 
 .p3Head{
@@ -19,7 +20,7 @@ p, ol, table {
 }
 
 body {
-    background-color: skyblue;
+    background-color: #008000;
 }
 
 #p3img {
@@ -37,4 +38,281 @@ a:visited {
 
 a:hover {
     color: green;
+}
+
+/*  assignment 6 */
+
+.sidebar img {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+
+.sidebar {
+    overflow: auto;
+    height: 90%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F5F5DC;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 40px;
+    border: 8px solid  #C5E1A5;
+    font-family: Kanit;
+}
+
+.sidebar a{
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;  
+}
+
+
+.sidebar a:hover {
+    background-color: #388E3C; 
+    color: #FFFFFF;
+}
+
+.main-content {
+    overflow: auto;
+    height: 90%;
+    width: 78%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #F5F5DC;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 40px;
+    border: 8px solid  #C5E1A5;
+    
+}
+.settings-btn {
+    background-color: #F5F5DC;
+    color: black;
+    border: 2px solid #555555;
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: Kanit;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 60%;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 8px solid  #C5E1A5;
+}
+
+.main-content h2 {
+    text-align: center;
+}
+
+.header{
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid #C5E1A5;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #424242;
+    cursor: pointer;
+    font-family: Kanit;
+}
+
+.details {
+    background-color:  #008000;
+    padding: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    border-radius: 30px;
+    height: 380px;
+}
+
+.details p {
+    font-size: 24px;
+}
+
+/* settings page */
+.settings-options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+.settings-btn:hover {
+    background-color: #333333;
+    color: #FFD
+    700; 
+}
+
+/* expenses */
+.expense-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #F5F5DC;
+    border: 8px solid  #C5E1A5;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: Kanit;
+}
+
+.expense-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #CCCCCC;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+  }
+  
+  .form-input:focus {
+    border-color: #FFD700;
+    outline: none;
+  }
+  
+  .add-btn {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #555555;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: #333333;
+    color: #FFD700;
+  }
+  
+  /* Expense list styling */
+
+  
+  .expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #F5F5DC;
+    border: 8px solid  #C5E1A5;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .expense-item span {
+    color: #FFFFFF;
+  }
+  
+  .delete-btn {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #555555;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #333333;
+    color: #FFD700;
+  }
+
+  @media screen and (max-width: 600px) {
+    /* Sidebar adjustments */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
+
+    .sidebar a {
+        float: none;
+        text-align: left;
+        padding: 10px;
+    }
+
+    /* Main content adjustments */
+    .main-content {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: 0;
+        padding: 10px;
+        border-radius: 0;
+        border: none;
+    }
+
+    /* Scale images within main content */
+    #p3img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Font size adjustments */
+    h1, h2, p, ol, table {
+        font-size: 22px;
+    }
+
+    .settings-btn, .filter-btn {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .expense-form, .expense-list {
+        width: 100%;
+    }
 }
