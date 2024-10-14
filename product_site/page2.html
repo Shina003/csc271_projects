@@ -3,102 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Income page</title>
+    <title>Income</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Income tracker</h1>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <img src="images/logo.png" width="500" height="400" alt="website logo">
+        <a href="index.html" class="homepage_nav">HOME</a>
+        <a href="page2.html" class="income_nav">INCOME</a>
+        <a href="page3.html" class="expense_nav">EXPENSE</a>
+        <!-- <a href="page4.html" class="transactions_nav">TRANSACTIONS</a> -->
+        <a href="page5.html" class="settings">SETTINGS</a>
+    </div>
 
-<p>This page helps you track your income from various sources.
-    You can manage your finances by keeping track of your job earnings, side gigs,
-    or any other income you may have.</p>
+<div class="main-content">
+    <!-- pop up form -->
+    <!-- Button to open the popup form -->
+<button class="open-button" onclick="openForm()">Add item</button>
 
-<img src="images/income_example.png" alt="income tracking" title="public domain example of 
-income tracker. doesnt represent final product">
-<p>public domain example of 
-income tracker. doesnt represent final product</p>
+<!-- The popup form -->
+<div class="form-popup" id="myForm">
+    <form action="page3.html" class="form-container">
+    <div class="form-group">
+        <label for="title"><b>Title</b></label>
+        <input type="text" placeholder="Title" id="title" name="title" required>
+    </div>
 
-<h2>Example income sources</h2>
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Sex</th>
-        <th>Age</th>
-        <th>Location</th>
-        <th>Occupation</th>
-        <th>Income (yearly)</th>
-        <th>Web use (daily)</th>
-    </tr>
-    <tr>
-        <td>Alex Daniels</td>
-        <td>Male</td>
-        <td>24</td>
-        <td>California, USA</td>
-        <td>Software developer</td>
-        <td>$150k</td>
-        <td>12</td>
-    </tr>
-    <tr>
-        <td>Micheline Pascal</td>
-        <td>Female</td>
-        <td>28</td>
-        <td>Lille, France</td>
-        <td>Artist</td>
-        <td>€40k</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>Matthew Brown</td>
-        <td>Male</td>
-        <td>19</td>
-        <td>New York, USA</td>
-        <td>College student</td>
-        <td>$15k</td>
-        <td>9</td>
-    </tr>
-</table>
+    <div class="form-group">
+        <label for="amount"><b>Amount</b></label>
+        <input type="text" placeholder="Amount" id="amount" name="amount" required>
+    </div>
 
-<h2>Income Submission Form</h2>
-<form action="page2.html">
-    <p>Enter sample name
-        <input type="text" name="income source ">
-    </p>
-    <p>Enter sample sex
-        <input type="radio" name="sex" value="Male"> Male
-        <input type="radio" name="sex" value="Female"> Female
-        <input type="radio" name="sex" value="Other"> Other
-    </p>
-    <p>Enter age
-        <input type="text" name="age">
-    </p>
-    <p>Enter location
-        <input type="text" name="location">
-    </p>
-    <p>Enter Occupation
-        <input type="text" name="Occupation">
-    </p>
-    <p>Enter income
-        <input type="text" name="income">
-    </p>
-    <p>Enter daily web usage in hours
-        <input type="text" name="daily web usage">
-    </p>
-    <p>
-        <input type="submit" value="Submit">
-    </p>
+    <div class="form-group">
+        <label for="note"><b>Note</b></label>
+        <textarea placeholder="Note" id="note" name="note" required></textarea>
+    </div>
 
-</form>
-
-<h2>Income Management Tips</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HQzoZfc3GwQ" 
-        title="YouTube video"></iframe>
+    <button type="submit" class="btn">Add</button>
+    <button type="button" class="btn" onclick="closeForm()">Close</button>
+    </form>
+</div>
 
 
-<p><a href="index.html">Go to Homepage</a></p>
-<p><a href="page3.html">Go to expenses page</a></p>
+<header id="header">
+    <h2>Income</h2>
+</header>
 
-</body>
-</html>
+<div class="item-list">
+    <div class="item">
+        <span>Item 1</span>
+        <button class="delete-btn">Delete</button>
+    </div>
+    <div class="item">
+        <span>Item 2</span>
+        <button class="delete-btn">Delete</button>
+    </div>
+    <div class="item">
+        <span>Item 3</span>
+        <button class="delete-btn">Delete</button>
+    </div>
+    <div class="item">
+        <span>Item 4</span>
+        <button class="delete-btn">Delete</button>
+    </div>
+    <div class="item">
+        <span>Item 5</span>
+        <button class="delete-btn">Delete</button>
+    </div>
+</div>
+
+
+</div>
