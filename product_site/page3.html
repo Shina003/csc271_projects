@@ -13,45 +13,48 @@
     <div class="sidebar">
         <div class="logo"></div>
         <img src="images/logo.png" width="500" height="400" alt="website logo">
-        <a href="index.html" class="homepage_nav">HOME</a>
-        <a href="page2.html" class="income_nav">INCOME</a>
-        <a href="page3.html" class="expense_nav">EXPENSE</a>
-        <!-- <a href="page4.html" class="transactions_nav">TRANSACTIONS</a> -->
-        <a href="page5.html" class="settings">SETTINGS</a>
+        <a href="index.html" class="active">HOME</a>
+        <a href="page2.html" class="active">INCOME</a>
+        <a href="page3.html" class="active">EXPENSE</a>
+        <a href="page4.html" class="active">TRANSACTIONS</a>
+        <a href="page5.html" class="active">SETTINGS</a>
+        <a href="page6.html" class="active">CONTACT US</a>
     </div>
 
 <div class="main-content">
-    <!-- pop up form -->
-    <!-- Button to open the popup form -->
-<button class="open-button" onclick="openForm()">Add item</button>
 
-<!-- The popup form -->
-<div class="form-popup" id="myForm">
-    <form action="page3.html" class="form-container">
-    <div class="form-group">
-        <label for="title"><b>Title</b></label>
-        <input type="text" placeholder="Title" id="title" name="title" required>
-    </div>
-
-    <div class="form-group">
-        <label for="amount"><b>Amount</b></label>
-        <input type="text" placeholder="Amount" id="amount" name="amount" required>
-    </div>
-
-    <div class="form-group">
-        <label for="note"><b>Note</b></label>
-        <textarea placeholder="Note" id="note" name="note" required></textarea>
-    </div>
-
-    <button type="submit" class="btn">Add</button>
-    <button type="button" class="btn" onclick="closeForm()">Close</button>
-    </form>
-</div>
 
 
 <header id="header">
     <h2>Expenses</h2>
 </header>
+
+    <!-- pop up form -->
+    <!-- Button to open the popup form -->
+    <button class="open-button" onclick="openForm()">Add item</button>
+
+    <!-- The popup form -->
+    <div class="form-popup" id="myForm">
+        <form action="page3.html" class="form-container">
+        <div class="form-group">
+            <label for="title"><b>Title</b></label>
+            <input type="text" placeholder="Title" id="title" name="title" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="amount"><b>Amount</b></label>
+            <input type="text" placeholder="Amount" id="amount" name="amount" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="note"><b>Note</b></label>
+            <textarea placeholder="Note" id="note" name="note" required></textarea>
+        </div>
+    
+        <button type="submit" class="btn">Add</button>
+        <button type="button" class="btn" onclick="closeForm()">Close</button>
+        </form>
+    </div>
 
 <div class="item-list">
     <div class="item">
