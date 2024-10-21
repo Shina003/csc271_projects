@@ -6,10 +6,16 @@ h1 {
 
 h2 {
     font-size: 40px;
+    font-family: Kanit, sans-serif;
 }
 
-p, ol, table {
-    font-family: Kanit;
+h3 {
+    font-family: Kanit, sans-serif;
+    font-size: 25px;
+}
+
+p, ol {
+    font-family: Kanit, sans-serif;
     line-height: normal;
     font-size: 25px;
     color: #000000;
@@ -17,13 +23,7 @@ p, ol, table {
     margin-right: 5px;
 }
 
-.table-container {
-    max-width: 100%; /* Limit the container width to its parent */
-    overflow-x: auto; /* Allow horizontal scrolling if the content overflows */
-    border: 2px solid #008000; /* Optional: border around the container */
-    padding: 10px; /* Add some padding inside the container */
-    box-sizing: border-box;
-}
+
 
 
 .p3Head{
@@ -107,6 +107,31 @@ a:hover {
     
 }
 
+/* transactions page */
+.table-style {
+    max-width: 60vh; 
+    overflow-x: auto;
+    border: 2px solid #008000; 
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    height: 10px;
+}
+
+td {
+    font-size: 14px;
+    height: 10px;
+}
+
 /* settings page */
 .settings-btn {
     background-color: #F5F5DC;
@@ -173,6 +198,10 @@ a:hover {
     border-radius: 10px;
     height: 380px;
     border: 8px solid #008000;
+    height: 100vh;
+    margin-bottom: 20px;
+    
+    
 }
 
 .details p {
@@ -223,6 +252,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 250px;
 }
 
 .item {
@@ -295,7 +325,7 @@ a:hover {
     margin-right: 30px;
 }
 
-/* Styling the form */
+/* contact page*/
 form {
     display: inline-block;
     text-align: left;
@@ -363,7 +393,8 @@ form input[type="submit"]:hover {
     }
 
     .item-list{
-        margin-right: 20px;
+        max-width: 40vh;
+        margin-left: 10px;
     }
 
     .filter-btn {
@@ -372,11 +403,13 @@ form input[type="submit"]:hover {
 
     .sidebar img, .item {
         width: 80%;
-        margin: 10px 10px;
+        margin: 10px 0 10px;
     }
     .open-button {
         width: 80%;
         margin-bottom: 20px;
+        max-width: 40vh;
+        margin-left: 10px;
     }
 
     .sidebar img {
@@ -413,10 +446,36 @@ form input[type="submit"]:hover {
         font-size: 16px; 
         padding: 10px;
     }
+
+    .table-style {
+        overflow-x: auto;
+        margin-bottom: 40px;
+    }
+
+    .details{
+        height: 100vh;
+    }
+
+    .video {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 75%;
+        margin-top: 23px;
+    }
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* Media query for tablet screens (between 600px and 1024px) */
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
     .header a {
         float: none; 
         display: block;
@@ -440,11 +499,18 @@ form input[type="submit"]:hover {
         padding-bottom: 20px;
     }
 
+    .item-list{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+
 
     .sidebar img, .open-button, .item {
         width: 50%;
         height: 40%;
-        margin: 10px 10px;
+        margin: 10px 0 10px;
     }
     .sidebar img {
         margin-left: 160px;
@@ -473,4 +539,9 @@ form input[type="submit"]:hover {
     form textarea {
         font-size: 16px; 
     }
+
+    .details{
+        height: 100vh;
+    }
+    
 }
