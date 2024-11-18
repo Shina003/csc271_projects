@@ -373,6 +373,10 @@ form input[type="submit"]:hover {
     background-color: #388E3C;
 }
 
+#textFeedback, #emailFeedback, #messageFeedback {
+    color: red;
+    font-family: 'Kanit', sans-serif;
+}
 
 @media only screen and (max-width: 600px) {
     .header a {
