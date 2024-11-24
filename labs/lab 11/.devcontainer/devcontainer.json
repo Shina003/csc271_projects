@@ -1,0 +1,9 @@
+{
+    "name": "FurEverHome",
+    "extensions": [
+        "esbenp.prettier-vscode",
+        "ms-vsliveshare.vsliveshare",
+        "ms-vscode.live-server"
+    ],
+    "postCreateCommand": "npm install"
+  }
