@@ -51,6 +51,8 @@ a:hover {
     color: green;
 }
 
+
+
 /*  assignment 6 */
 
 .sidebar img {
@@ -89,6 +91,17 @@ a:hover {
     background-color: #388E3C; 
     color: #FFFFFF;
 }
+
+.sidebar a.active {
+    background-color: #388E3C;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.sidebar a:visited{
+    color: purple;
+}
+
 
 .main-content {
     overflow: auto;
@@ -208,22 +221,113 @@ td {
     font-size: 24px;
 }
 
+
 /* income and expenses */
-/* pop up form */
-.open-button {
+.page-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-top: 150px;
+}
+
+
+
+.left-container {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.search-summary {
+    display: flex;
+    flex-direction: column; /* Stack search bar and summary vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 40%;
+    margin-left: 50px;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #008000;
+    border-radius: 5px;
+    font-family: Kanit, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.summary-container {
+    background-color: #F5F5DC;
+    border: 8px solid #008000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    font-family: Kanit, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+
+/* item lists */
+.item-list{
+    margin: 0;
+    padding-left : 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+    background-color: #F5F5DC;
+    border-radius: 10px;
+    font-size: 16px;
+    color: black;
+    border: 8px solid #008000;
+    margin: 10px 60px 0px 40px ;
+    font-family: kanit;
+    align-items: center;
+}
+
+.form-button{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+    background-color: #F5F5DC;
+    border-radius: 10px;
+    font-size: 16px;
+    color: black;
+    border: 8px solid #008000;
+    margin: 10px 60px 0px 40px ;
+    font-family: kanit;
+    align-items: center;
+}
+
+.delete-btn {
     background-color: #F5F5DC;
     color: black;
-    padding: 15px 30px;
-    border: 8px solid #008000;
-    font-size: 16px;
-    font-family: Kanit;
-    border-radius: 10px;
-    position: fixed;
-    margin-top: 125px;
-    margin-left: 50px;
-    width: 20%;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    padding: 5px 15px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 3px solid #008000;
+    font-family: Kanit;
+    white-space: nowrap; 
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .open-button:hover{
@@ -247,40 +351,7 @@ td {
     
 }
 
-/* item lists */
-.item-list{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 250px;
-}
 
-.item {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 15px 30px;
-    background-color: #F5F5DC;
-    border-radius: 10px;
-    font-size: 16px;
-    color: black;
-    border: 8px solid #008000;
-    width: 50%;
-    margin: 10px 60px 0px 400px ;
-    font-family: kanit;
-}
-
-.delete-btn {
-    background-color: #F5F5DC;
-    color: black;
-    border: 2px solid #4CAF50;
-    border-radius: 8px;
-    padding: 5px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: 3px solid #008000;
-    font-family: Kanit;
-}
 
 .delete-btn:hover {
     background-color: #008000;
@@ -303,11 +374,29 @@ td {
     font-family: Kanit;
 }
 
+/* Home page */
+#incomeExpenseChart {
+    width: 500px;
+    height: 500px;
+    display: block;
+    align-items: center;
+}
+
+.headingchart{
+    font-family: Kanit;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+
 /* Info panels container */
 .info-panels {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    
 }
 
 .balance-panel, .activity-panel {
@@ -401,8 +490,85 @@ form input[type="submit"]:hover {
         margin-left: 10px;
     }
 
-    .filter-btn {
-        margin: 4px 4px 4px 4px;
+    /* transaction page*/
+
+
+    .transaction-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.transaction-list .transaction-date,
+.transaction-list .transaction-type,
+.transaction-list .transaction-title,
+.transaction-list .transaction-amount {
+    flex: 1;
+    text-align: center;
+}
+
+.transaction-list .transaction-amount {
+    font-weight: bold;
+}
+    .transaction-list .income {
+        color: green;
+    }
+
+    .transaction-list .expense {
+        color: red;
+    }
+
+    .transaction-item{
+        font: kanit, sans-serif;
+        font-size: 16px;
+
+    }
+    #transaction-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: left;
+        font-family: kanit, sans-serif;
+    }
+    
+    #transaction-table th, #transaction-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+    
+    #transaction-table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+        font-family: kanit, sans-serif;
+    }
+    
+    #transaction-table td {
+        text-align: center;
+    }
+    
+    #transaction-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    #transaction-table tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+
+    .summary {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
     }
 
     .sidebar img, .item {
@@ -548,4 +714,52 @@ form input[type="submit"]:hover {
         height: 100vh;
     }
     
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-summary {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .summary-container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .item-list {
+        width: 90%;
+    }
+
+    .item {
+        flex-direction: column; /* Stack content vertically on small screens */
+        text-align: left;
+    }
+
+    .delete-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #search-bar {
+        font-size: 14px;
+    }
+
+    .summary-container {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .item {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
