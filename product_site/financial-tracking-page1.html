@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>financial tracking</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -13,12 +16,11 @@
     <div class="sidebar">
         <div class="logo"></div>
         <img src="images/logo.png" width="500" height="400" alt="website logo">
-        <a href="financial tracking page1.html" class="active">HOME</a>
-        <a href="financial tracking page2.html" class="active">INCOME</a>
-        <a href="financial tracking page3.html" class="active">EXPENSE</a>
-        <a href="financial tracking page4.html" class="active">TRANSACTIONS</a>
-        <a href="financial tracking page5.html" class="active">SETTINGS</a>
-        <a href="financial tracking page6.html" class="active">CONTACT US</a>
+        <a href="financial-tracking-page1.html" class="active">HOME</a>
+        <a href="financial-tracking-page2.html">INCOME</a>
+        <a href="financial-tracking-page3.html">EXPENSE</a>
+        <a href="financial-tracking-page4.html">TRANSACTIONS</a>
+        <a href="financial-tracking-page6.html">CONTACT US</a>
     </div>
 
 <div class="main-content">
@@ -26,19 +28,20 @@
         <h1>Spendwise</h1>
         <p>Spendwise is designed to help you take control of your finances. 
             With features that allow you to track your <strong>income</strong> and expenses from multiple sources, 
-            you will have a clear view of your financial health at all times. for questions, email us at <a href="page6.html">faith_adewumi@uri.edu</a></p>
+            you will have a clear view of your financial health at all times. for questions, email us at <a href="financial-tracking-page6.html">faith_adewumi@uri.edu</a></p>
     </div>
-    
-    <div class="info-panels">
-        <div class="balance-panel">
-            <span id="balance-span">BALANCE</span>
-        </div>
 
-        <div class="activity-panel">
-            <span>RECENT ACTIVITY (INCOME, EXPENSE...)</span>
-        </div>
+    <div class="headingchart">
+        <h3>income vs expense chart</h3>
     </div>
+
+
+    <canvas id="incomeExpenseChart"></canvas>
+
+
+
 </div>
 
-<script src="js/simple_script.js"></script>
+<script src="js/Page1Home.js"></script>
+
 </body>
